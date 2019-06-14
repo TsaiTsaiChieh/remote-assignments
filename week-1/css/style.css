@@ -1,0 +1,269 @@
+/* ================================= 
+  Roos Styles
+==================================== */
+:root {
+	--font-stack: Georgia;
+}
+/* ================================= 
+  Base Element Styles
+==================================== */
+* {
+	box-sizing: border-box;	
+}
+body {
+	font-family: var(--font-stack) !important;
+	line-height: 1.6;
+	padding-top: 3em;
+	/* position: relative; */
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+/* ---- Menu ---- */
+
+#menu_control {
+	position: absolute;
+	opacity: 0;
+}
+
+.menu_btn {
+	position: absolute;
+	width: 3em;
+	height: 2.5em;
+	background: #eee;
+	top: .25em;
+	right: 3em;
+}
+
+.menu_btn::before {
+	position: absolute;
+	content: '';
+	background: #555;
+	width: 2em;
+	height: .15em;
+	left: .45em;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	box-shadow: 0 .5em 0 #555,
+	0 -.5em 0 #555;
+}
+
+#menu_control:checked~.main-header .main-nav {
+	left: 0;
+}
+#menu_control:checked~.display-mask {
+	display: block;
+}
+
+.display-mask {
+	transform: .5s;
+	display: none;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	background: rgba(0,0,0,.5);
+	top: 0;
+}
+
+/* ---- Navigation ---- */
+.main-header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	background: #eee;
+	font-size: 1em;
+	display: flex;
+	/* position: relative; */
+	position: fixed;
+	width: 100%;
+	top: 0;
+	
+}
+
+.name {
+	padding-left: 2.5em; 
+}
+
+.main-nav {
+	display: flex;
+	flex-direction: column;
+	background: #eee;
+	width: 40%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	box-shadow: 1px 0 5px #888;
+	left: -100%;
+	transition: .5s;
+}
+
+.main-nav li {
+	
+	border-bottom: 1px solid #ccc;
+}
+.main-nav li a {
+	width: 6em;
+	text-align: left;
+	padding-top: .2em;
+	
+}
+.logo {
+	width: 2em;
+	height: 2em;
+	vertical-align: middle;
+	margin-right: .5em; 
+}
+.name a,
+.main-nav li a {
+	color: black;
+	text-align: center;
+	display: block;
+	
+}
+
+.main-nav a:hover {
+	color: lightblue;
+}
+
+/* ---- Banner ---- */
+
+
+.banner {
+	font-weight: bold;
+    font-size: 1.5em;
+	text-align: center;
+	background: #cde;
+	padding: 3.2em 0;
+}
+.headline {
+	margin-bottom: 0;
+}
+
+
+/* ---- Row ---- */
+
+.section-title {
+	font-size: 1.2em;
+	text-align: center;
+	font-weight: bold;
+	margin: 1.5em 0;
+}
+
+.row {
+	width: 90%;
+	margin: 0 auto;
+}
+.col {
+	background: #89a;
+	height: 9em;
+	margin: 1.5em auto;
+	text-align: center;
+	padding-top: .5em;
+}
+
+
+/* ---- Footer ---- */
+.main-footer {
+
+	text-align: center;
+	background: powderblue;
+	padding: 1.5em 0;
+	/* margin-top: 30px; */
+}
+
+/* ---- Button ---- */
+.main-btn {
+    margin-bottom: .5em;
+    text-align: center;
+}
+.btn {
+    font-family: var(--font-stack);
+    font-size: 1em;
+    background: #D9EEFE;
+    border: none;
+    width: 8em;
+	height: 4em;
+	margin-bottom: 1em
+}
+/* ================================= 
+  Media Queries
+==================================== */
+@media (min-width: 501px) {
+
+	/* sticky footer setting */
+	body {
+		display: flex;
+        flex-direction: column;
+		min-height: 100vh;
+	}
+	.main-footer {
+		margin-top: auto;
+	}
+
+	.col-container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.col {
+		width: 45%;
+	}
+	.col:nth-child(-n+2) {
+		margin: 0 auto;
+	}
+}
+
+
+/* iPad Pro */
+@media (min-width: 800px) {
+	.header-container {
+		width: 90%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+	}
+	/* ++ */
+	.main-nav ul{
+		vertical-align: middle;
+	} 
+	
+	.main-nav li{
+		display: inline-block;
+		/* margin-top: 10px;  */
+	}
+
+	.menu_btn {
+		display: none;
+	}
+
+	.main-nav {
+		left: 0;
+		position: relative;
+		height: 0;
+		flex-direction: row;
+		transition: none;
+	
+		width: auto;
+	}
+	.main-nav li {
+		/* margin-top: 0;  */
+		border: none;
+		padding-right: 1.2em;
+	}
+	
+	.name {
+		padding-left: 0; 
+	}
+}
+
+@media (min-width: 1200px) {
+	.header-container {
+		width: 95%;
+	}
+	.row {
+		width: 80%;
+		max-width: 1200px;
+	}
+}
