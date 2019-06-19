@@ -176,15 +176,18 @@ body {
 
 
 .banner {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	font-family: var(--font-stack);
-	font-weight: bold;
-    font-size: 1.5em;
 	text-align: center;
 	background: #cde;
-	padding: 3.2em 0;
+	height: 12em;
+	line-height: 2em;
 }
 .headline {
-	margin-bottom: 0;
+	font-weight: bold;
+	font-size: 1.5em;
 }
 
 
