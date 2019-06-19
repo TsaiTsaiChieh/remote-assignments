@@ -179,14 +179,19 @@ body {
 
 .banner {
 	font-family: var(--font-stack);
-	font-weight: bold;
-    font-size: 1.5em;
+	
 	text-align: center;
 	background: #cde;
 	padding: 3.2em 0;
 }
 .headline {
 	margin-bottom: 0;
+	font-weight: bold;
+    font-size: 1.5em;
+}
+.banner h2{
+	font-size: 1em;
+
 }
 
 
@@ -215,14 +220,9 @@ body {
 	display: flex;
 	justify-content: space-around;
 	text-align: center;
-
 	font-size: 1.5em;
 	font-family: var(--font-stack);
-	
 	padding: .2em 0;
-	/* display: flex; */
-	/* flex-direction: row; */
-	/* justify-content: ; */
 }
 
 .copy-btn {

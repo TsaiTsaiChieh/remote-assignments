@@ -51,8 +51,7 @@ var ass1_code = `function maxValue(array) {
 console.log('Assigment1: ');
 console.log('Max value is', maxValue([1, 2, 4, 5]), 'in array[1,2,4,5].');
 console.log('Max value is', maxValue([5, 2, 7, 1, 6]), 'in array[5,2,7,1,6].');`;
-var ass2_code = `
-function calculate(args) {
+var ass2_code = `function calculate(args) {
     let result;
     if (args.op === "+") {
         result = args.n1 + args.n2;
@@ -76,8 +75,7 @@ console.log('Object1 {', obj1.op, ',', obj1.n1, ',', obj1.n2, '} is', calculate(
 console.log('Object2 {', obj2.op, ',', obj2.n1, ',', obj2.n2, '} is', calculate(obj2));
 `;
 
-var ass3_code = `
-function avg(data) {
+var ass3_code = `function avg(data) {
     let data_sum = 0;
     for (let i = 0; i < data.products.length; i++) {
         data_sum += data.products[i].price;
@@ -106,8 +104,7 @@ console.log('Assigment3');
 console.log('Average price is ', avg(data));
 `;
 
-var ass5_code = `
-function twoSum(nums, target) {
+var ass5_code = `function twoSum(nums, target) {
     var ans_array = [];
     for (let i = 0; i < nums.length; i++) {
         tmp = target - nums[i];

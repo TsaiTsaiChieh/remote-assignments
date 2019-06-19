@@ -208,6 +208,9 @@ body {
 	text-align: center;
 	padding-top: .5em;
 }
+.col-2 {
+	margin-top: 0; 
+}
 
 
 /* ---- Footer ---- */
