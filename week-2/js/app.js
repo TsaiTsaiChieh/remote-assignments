@@ -1,4 +1,5 @@
 const banner = document.getElementsByClassName('banner')[0];
+var count_banner_click = 0;
 const main_nav = document.getElementsByClassName('main-nav')[0];
 const close_menu = document.getElementsByClassName('close-menu')[0];
 const menu_btn = document.getElementsByClassName('menu-btn')[0];
@@ -11,7 +12,9 @@ var window_size = window.matchMedia("(min-width: 800px)");
 */
 
 banner.addEventListener('click', () => {
-    banner.textContent = 'Have a Good Time!';
+    count_banner_click ++;
+    if (count_banner_click % 2 == 1) banner.textContent = 'Have a Good Time!';
+    else banner.textContent = 'Welcome!';
 });
 
 

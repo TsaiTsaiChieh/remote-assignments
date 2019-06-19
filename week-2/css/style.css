@@ -129,7 +129,7 @@ body {
     left: .5em;
 }
 .close-menu:hover, 
-.close-menu:active {
+.close-menu:focus {
 	opacity: 1;
 	transition: .5s;
 }
