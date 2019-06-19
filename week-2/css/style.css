@@ -84,6 +84,7 @@ body {
 }
 
 .name {
+	padding-top: .2em;
 	padding-left: 2.5em; 
 }
 
@@ -104,12 +105,13 @@ body {
 
 .close-menu {
 	position: absolute;
-	top: .3em;
-	right: .8em;
+	top: .2em;
+	right: .5em;
 	background: #000;
-	width: 1.2em;
-	height: 1.2em;
+	width: 1.5em;
+	height: 1.5em;
 	opacity: .4;
+	border-radius: 20px;
 }
 .close-menu::after {
     content: '';
@@ -117,7 +119,8 @@ body {
     border-left: 2px solid #fff;
     position: absolute;
 	transform: rotate(45deg);
-    left: .5em;
+	top: .14em;
+    left: .7em;
 }
 
 .close-menu::before {
@@ -125,8 +128,9 @@ body {
     height: 1.2em;
     border-left: 2px solid #fff;
     position: absolute;
-    transform: rotate(-45deg);
-    left: .5em;
+	transform: rotate(-45deg);
+	top: .14em;
+    left: .7em;
 }
 .close-menu:hover, 
 .close-menu:focus {
@@ -202,11 +206,14 @@ body {
 
 /* ---- Footer ---- */
 .main-footer {
-
 	text-align: center;
 	background: powderblue;
-	padding: 1.5em 0;
-	/* margin-top: 30px; */
+
+}
+.main-footer span {
+	display: inline-block;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
 }
 
 /* ---- Button ---- */
