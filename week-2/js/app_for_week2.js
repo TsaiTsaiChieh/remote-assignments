@@ -49,8 +49,8 @@ var ass1_code = `function max(...numbers) {
     return numbers[numbers.length - 1];
 }
 console.log('Assigment1: ');
-console.log(`Max value is ${ max(1, 2, 4, 5)} in 1, 2, 4, 5.`);
-console.log(`Max value is ${ max(5, 2, 7, 1, 6) } in 5, 2, 7, 1, 6.`);`;
+console.log(\`Max value is ${ max(1, 2, 4, 5)} in 1, 2, 4, 5.\`);
+console.log(\`Max value is ${ max(5, 2, 7, 1, 6)} in 5, 2, 7, 1, 6.\`);`;
 var ass2_code = `function calculate(args) {
     let result;
     if (args.op === "+") {
