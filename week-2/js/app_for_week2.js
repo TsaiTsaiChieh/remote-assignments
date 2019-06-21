@@ -34,23 +34,23 @@ menu_contrl();
 close_display_mask(window_size); // Call listener function at run time
 window_size.addListener(close_display_mask); // Attach listener function on state changes
 
-var ass1_code = `function maxValue(array) {
-    let toIdx = array.length;
+var ass1_code = `function max(...numbers) {
+    let toIdx = numbers.length;
     while (toIdx > 1) {
         toIdx--;
         for (let i = 0; i < toIdx; i++) {
-            if (array[i] > array[i + 1]) {
-                let tmp = array[i];
-                array[i] = array[i + 1];
-                array[i + 1] = tmp;
+            if (numbers[i] > numbers[i + 1]) {
+                let tmp = numbers[i];
+                numbers[i] = numbers[i + 1];
+                numbers[i + 1] = tmp;
             }
         }
     }
-    return array[array.length - 1];
+    return numbers[numbers.length - 1];
 }
 console.log('Assigment1: ');
-console.log('Max value is', maxValue([1, 2, 4, 5]), 'in array[1,2,4,5].');
-console.log('Max value is', maxValue([5, 2, 7, 1, 6]), 'in array[5,2,7,1,6].');`;
+console.log('Max value is', max(1, 2, 4, 5), 'in 1,2,4,5.');
+console.log('Max value is', max(5, 2, 7, 1, 6), 'in 5,2,7,1,6.');`;
 var ass2_code = `function calculate(args) {
     let result;
     if (args.op === "+") {
