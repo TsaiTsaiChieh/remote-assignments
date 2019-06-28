@@ -1,0 +1,6 @@
+extends layout.pug
+block main
+    form(action="/myName",method="POST")
+        label Enter your name:
+            input(type="text", name="name")
+        button(type="submit") Submit

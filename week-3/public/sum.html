@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sum</title>
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <script>
+        function getReq() {
+            var req = new XMLHttpRequest();
+            req.onreadystatechange = function () {
+                if (req.readyState === 4) {
+                    var text = req.responseXML.getElementsByTagName('p')[0].innerHTML;
+                    document.getElementsByClassName('result')[0].innerHTML = text;
+                }
+            };
+            let number = document.getElementsByName('number')[0].value;
+
+
+            if (!number) {
+                req.open('GET', 'getData');
+            }
+            else {
+                number = parseInt(number);
+                req.open('GET', `getData?number=${number}`);
+            }
+
+            // have to explicitly request a document by assigning the string "document" to the responseType property of the XMLHttpRequest object after calling open()
+            req.responseType = "document";
+            req.send();
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <label>Enter a number and hit or submit to get the result from the server.</label>
+        <p class="result"></p>
+        <input type="text" name="number">
+        <button class="btn">Submit</button>
+
+    </div>
+    <script>
+        const input = document.getElementsByName('number')[0];
+        const btn = document.getElementsByClassName("btn")[0];
+        input.addEventListener('keyup', (event) => {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                btn.click();
+            }
+        });
+        btn.addEventListener('click', () => {
+            getReq();
+        });
+
+    </script>
+</body>
+
+</html>
