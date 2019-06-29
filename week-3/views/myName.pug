@@ -1,6 +1,16 @@
 extends layout.pug
 block main
-    form(action="/myName",method="POST")
-        label Enter your name:
-            input(type="text", name="name")
-        button(type="submit") Submit
+    .container 
+        if username
+            p Cookie: #{username}
+            form(action="/clear",method="POST")
+                button(type="submit" class="clearCookie") Clear Cookies
+        else
+            form(action='/trackName', method='POST')
+                label Enter your name
+                br
+                |    
+                input(type='text', name='username')
+                br
+                |
+                button(type='submit') Submit

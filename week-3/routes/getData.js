@@ -3,6 +3,8 @@ const router = express.Router();
 
 router.get('.?', (req, res) => {
     const { number } = req.query;
+    // cons3ole.log(number);
+
     var data = '';
 
     if (!number) {
