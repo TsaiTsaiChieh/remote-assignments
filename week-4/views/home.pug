@@ -1,0 +1,27 @@
+extends layout
+block main
+    .container
+        h2 Welcome!
+        button(class="sign-up") Sign up
+        form.form-sign-up(action="/sign-up", method="POST",onsubmit="return signup_check()")
+            if signup_message
+                h3.sign-up-h3= signup_message
+            else
+                h3 Signup
+            label E-mail
+                input.sign-up-email(type='text', name='email')
+            label Password
+                input.sign-up-password(type='password', name='password')
+            button(type="submit", class="sign-up-submit") Submit
+        button(class="sign-in") Sign in
+        form.form-sign-in(action="/sign-in", method="POST",onsubmit="return signin_check()")
+            if signin_message
+                h3.sign-in-h3= signin_message
+            else
+                h3 Signin
+            label E-mail
+                input.sign-in-email(type='text', name='email')
+            label Password
+                input.sign-in-password(type='password', name='password')
+            button(type="submit", class="sign-in-submit") Submit
+    script(src='js/app.js')

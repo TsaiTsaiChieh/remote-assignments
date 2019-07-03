@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    font-size: 2.5em;
+    color: steelblue;
+    padding: .5em 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.sign-up,
+.sign-in
+{
+    font-size: 1.5em;
+    width: 10em;
+    margin: .5em 0;
+    padding: .3em 0;
+    border-radius: .5em;
+    color: #555;
+    background: lightgreen;
+    border: none;
+}
+.sign-up:hover,
+.sign-in:hover
+{
+    transform: .8s;
+    
+    color: lightgreen;
+    background: #555;
+}
+
+.form-sign-up,
+.form-sign-in 
+{
+    display: none;
+    /* display: flex; */
+    border: 1.5px steelblue dashed;
+    border-radius: .5em; 
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em auto;
+    padding-top: 1em;
+   
+}
+h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: blue;
+    margin-bottom:.5em; 
+}
+label {
+    line-height: 2;
+    font-size: 1em;
+}
+input {
+    margin-left:.5em;
+    width: 10em;
+    font-size: 1em;
+    text-align: center;
+}
+.sign-up-submit,
+.sign-in-submit
+{
+    font-size: 1em;
+    width: 5em;
+    margin: .5em 0 1em;
+    padding: .2em 0;
+    border-radius: .5em;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+@media only screen and (min-width: 800px) {
+    .form-sign-up,
+    .form-sign-in 
+    {
+        width: 40%;
+    }
+    input {
+        width: 14em;
+    }
+}
