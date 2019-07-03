@@ -45,9 +45,9 @@ function render(data) {
     table.innerHTML += td_;
 
 }
-// ajax("https://cwpeng.github.io/live-records-samples/data/products.json", function (response) {
-//     render(response);
-// });
-ajax("../data/products.json", function (response) {
+ajax("https://cwpeng.github.io/live-records-samples/data/products.json", function (response) {
     render(response);
 });
+// ajax("../data/products.json", function (response) {
+//     render(response);
+// });
